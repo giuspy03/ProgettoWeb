@@ -1,0 +1,68 @@
+{
+  "realm": "Autolavaggio-Domicilio",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "autolavaggio_client",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "directAccessGrantsEnabled": true,
+      "secret": "secret",
+      "redirectUris": ["*"],
+      "webOrigins": ["*"]
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "superUser",
+        "description": "super admin role",
+        "composite": true,
+        "composites": {
+          "realm": ["washer", "user", "admin"]
+        }
+      },
+      {
+        "name": "admin",
+        "description": "Administrator role",
+        "composite": true,
+        "composites": {
+          "realm": ["washer", "user"]
+        }
+      },
+
+      {
+        "name": "washer",
+        "description": "A user that washes",
+        "composite": true,
+        "composites": {
+          "realm": ["user"]
+        }
+      },
+      {
+        "name": "user",
+        "description": "A regular user"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "superuser",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "super",
+      "lastName": "user",
+      "email": "super.user@autolavaggio.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "root"
+        }
+      ],
+      "realmRoles": [
+        "superUser"
+      ]
+    }
+  ]
+}
