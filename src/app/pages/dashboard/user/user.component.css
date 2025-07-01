@@ -1,0 +1,80 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+}
+
+.dashboard-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #0077cc;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #218838;
+}
+
+.appointment-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.appointment-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
